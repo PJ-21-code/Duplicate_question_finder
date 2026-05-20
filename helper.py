@@ -15,7 +15,6 @@ from sentence_transformers import SentenceTransformer, CrossEncoder
 from sklearn.metrics.pairwise import cosine_similarity
 import streamlit as st
 import math
-from spacy.cli import download
 # --- CACHE MODELS FOR PERFORMANCE ---
 @st.cache_resource
 def load_spacy_model():
