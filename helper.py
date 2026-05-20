@@ -19,11 +19,7 @@ from spacy.cli import download
 # --- CACHE MODELS FOR PERFORMANCE ---
 @st.cache_resource
 def load_spacy_model():
-    try:
-        return spacy.load("en_core_web_sm")
-    except OSError:
-        download("en_core_web_sm")
-        return spacy.load("en_core_web_sm")
+    return spacy.load("en_core_web_sm")
 
 @st.cache_resource
 def load_embedding_model():
@@ -289,7 +285,7 @@ def preprocess(q):
 
   q= BeautifulSoup(q)
   q= q.get_text()
-  pattern= re.compile('\W')
+  pattern= re.compile(r'\W')
   q= re.sub(pattern,' ',q).strip()
 
   return q
