@@ -51,3 +51,6 @@ The system uses a multi-stage approach to evaluate if two questions mean the sam
 ### Streamlit
 - **Purpose**: Web User Interface application (`duplicate_finder.py`).
 - **Role**: Exposes the Python backend via a fast, reactive front-end. It provides caching (`@st.cache_resource`) so heavy ML models are only loaded into memory once and displays diagnostic pipeline metrics securely in realtime.
+
+### Here is the deployed streamlit app of Duplicate Question Finder
+https://duplicatequestionfinder-tdpbwnztyseeq2w5vtnasq.streamlit.app/
